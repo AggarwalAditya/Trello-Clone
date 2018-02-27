@@ -23,5 +23,8 @@
     height: 50px; }
   .container-fluid .formContainer p {
     text-align: center; }
+  .container-fluid .formContainer #message {
+    padding: 5px;
+    color: red; }
 
 /*# sourceMappingURL=signup.css.map */
