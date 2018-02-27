@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.container-fluid .formContainer {
+  font-family: 'Open Sans',serif;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 30%;
+  left: 50%;
+  margin: -100px 0 0 -150px; }
+  .container-fluid .formContainer #signupHeading {
+    text-align: center;
+    margin-bottom: 30px; }
+  .container-fluid .formContainer .signupInput {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    background-color: #F8F8F8; }
+  .container-fluid .formContainer #signupButton {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 50px; }
+  .container-fluid .formContainer p {
+    text-align: center; }
+
+/*# sourceMappingURL=signup.css.map */

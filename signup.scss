@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.container-fluid
+{
+    .formContainer
+    {
+        font-family: 'Open Sans',serif;
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        top: 30%;
+        left: 50%;
+        margin: -100px 0 0 -150px;
+
+        
+        #signupHeading
+        {
+           text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .signupInput
+        {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 50px;
+            background-color: #F8F8F8;
+        }
+        
+        #signupButton
+        {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            height: 50px;
+        }
+        
+        p
+        {
+           text-align: center;
+        }
+        
+    }
+}
