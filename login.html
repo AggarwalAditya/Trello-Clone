@@ -4,20 +4,23 @@
     <head>
         <title>UI Project</title>
         <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="login.css">
     </head>
     
     <body>
     
         <div class="container-fluid">
-            <h1>Please login</h1>
-            <input type="email" class="form-control" id="email">
-            <input type="password" class="form-control" id="password">
-            <button type="button" class="btn btn-primary">Submit</button>
-            <p>Create an account</p>
+            <div class="formContainer">
+                <h1 id="loginHeading">Please login</h1>
+                <input type="email" class="form-control loginInput" id="email" placeholder="Email">
+                <input type="password" class="form-control loginInput" id="password" placeholder="Password">
+                <button type="button" class="btn btn-primary" id="loginButton">Login</button>
+                <p>Create an account</p>
+            </div>
         </div>
     
     </body>
