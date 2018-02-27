@@ -50,6 +50,7 @@ formBody = formBody.join("&");
               }).then(function(res){})
     .then(function(data){
        
+        sessionStorage.setItem("email",email);
        window.location="./index.html";
    })
 }

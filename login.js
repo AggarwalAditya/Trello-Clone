@@ -33,6 +33,7 @@ function hitServer()
        
        if(flag===1)
         {
+            sessionStorage.setItem("email",email);
             window.location="./index.html"
         }
        
