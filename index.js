@@ -6,8 +6,40 @@ $(document).ready(function(){
         let stringJSON=JSON.stringify(data);
         localStorage.setItem("notesJSON",stringJSON);
         let jsonData=JSON.parse(stringJSON);
-        
+        console.log(jsonData);
         console.log("LETS PARSE THE JSON");
+        
+        
+        
+        //MAKE THE DATA STRUCTURE
+        
+        let map = {};
+        let userEmail=sessionStorage.getItem("email");;
+        for(let i=0;i<jsonData.length;i++)
+        {
+            let obj=jsonData[i];
+            console.log(obj);
+            if(obj.email===userEmail)
+            {
+                console.log("THIS OBJ IS FOR THE LOGGED IN USER");
+                console.log(obj);
+                
+                if(String(obj.tag) in map)
+                {
+                    map[String(obj.tag)].push(String(obj.text));
+                }
+                else
+                {
+                    let arr=[];
+                    arr.push(String(obj.text));
+                    map[String(obj.tag)]=arr;
+                }
+            }
+        }
+        
+        console.log("MY DS is:");
+        console.log(map);
+        
        
          let template="<ul id='myTagList'>{{#.}}<li class='singleTag' id={{tag}}><p class='fa fa-hashtag'></p>{{tag}}</li>{{/.}}</ul>"
     let html=Mustache.render(template,jsonData);
@@ -78,7 +110,7 @@ formBody = formBody.join("&");
 let logout=document.getElementById("logout");
 logout.addEventListener("click",function(){
    sessionStorage.removeItem("email");
-    window.location="./login.html"
+    window.location="./login.html";
 });
 
 

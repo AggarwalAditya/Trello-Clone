@@ -31,6 +31,9 @@
                 
                 border: 1px solid grey;
                 padding: 4px;
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
     }

@@ -16,6 +16,8 @@
       margin: 10px;
       border: 1px solid grey;
       padding: 4px; }
+      .container-fluid .myContainer .tagContainer .singleTag:hover {
+        cursor: pointer; }
   .container-fluid #home {
     left: 0;
     display: inline-block; }
