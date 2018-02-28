@@ -19,12 +19,31 @@
             <p id=logout>LOGOUT</p>
             <div class="myContainer">
                 <div class="buttonContainer">
-                    <button type="button" class="btn btn-success" id="newNoteButton">NEW NOTE</button>
+                    <button type="button" class="btn btn-success btn-info btn-lg" id="newNoteButton" data-toggle="modal" data-target="#myModal">NEW NOTE</button>
                 </div>
                 <div class="tagContainer">
                     
                 </div>
             </div>
+            
+            <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <p id="tagHeading">ENTER A TAG</p>
+        <input type="text" class="form-control" id="tag">
+        <p id="noteHeading">NOTE</p>
+        <input type="text" class="form-control" id="note">
+        <button type="button" class="btn btn-success" id="saveButton">SAVE</button>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
         </div>
         
         
