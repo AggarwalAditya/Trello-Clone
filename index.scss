@@ -2,27 +2,35 @@
 
 .container-fluid
 {
+    position: relative;
     .myContainer
     {
        font-family: 'Open Sans',serif;
-        position: absolute;
-        width: 300px;
-        height: 200px;
-        top: 30%;
-        left: 50%;
-        margin: -100px 0 0 -150px;
+       text-align: center;
         
         .buttonContainer
         {
-            
+            display: inline-block;
         #newNoteButton
             {
-                width: 100%;
+                
                 margin-top: 20px;
                 margin-bottom: 10px;
                 text-align: center;
                 height: 50px;
 
+            }
+        }
+        
+        .tagContainer
+        {
+            .singleTag
+            {
+                display: inline-block;
+                margin: 10px;
+                
+                border: 1px solid grey;
+                padding: 4px;
             }
         }
     }
@@ -36,7 +44,11 @@
     {
         
         display: inline-block;
-        margin-left:1220px;
+        margin-left:1200px;
+        hover{
+        cursor: pointer;    
+        }
+        
     }
     
     #myModal

@@ -1,35 +1,40 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-.container-fluid .myContainer {
-  font-family: 'Open Sans',serif;
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  top: 30%;
-  left: 50%;
-  margin: -100px 0 0 -150px; }
-  .container-fluid .myContainer .buttonContainer #newNoteButton {
-    width: 100%;
+.container-fluid {
+  position: relative; }
+  .container-fluid .myContainer {
+    font-family: 'Open Sans',serif;
+    text-align: center; }
+    .container-fluid .myContainer .buttonContainer {
+      display: inline-block; }
+      .container-fluid .myContainer .buttonContainer #newNoteButton {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        height: 50px; }
+    .container-fluid .myContainer .tagContainer .singleTag {
+      display: inline-block;
+      margin: 10px;
+      border: 1px solid grey;
+      padding: 4px; }
+  .container-fluid #home {
+    left: 0;
+    display: inline-block; }
+  .container-fluid #logout {
+    display: inline-block;
+    margin-left: 1200px; }
+    .container-fluid #logout hover {
+      cursor: pointer; }
+  .container-fluid #myModal .modal-dialog .modal-content .modal-body #tag {
+    margin-top: 15px; }
+  .container-fluid #myModal .modal-dialog .modal-content .modal-body #noteHeading {
+    padding-top: 15px; }
+  .container-fluid #myModal .modal-dialog .modal-content .modal-body #note {
+    margin-top: 15px;
+    height: 250px; }
+  .container-fluid #myModal .modal-dialog .modal-content .modal-body #saveButton {
     margin-top: 20px;
     margin-bottom: 10px;
-    text-align: center;
+    width: 100%;
     height: 50px; }
-.container-fluid #home {
-  left: 0;
-  display: inline-block; }
-.container-fluid #logout {
-  display: inline-block;
-  margin-left: 1220px; }
-.container-fluid #myModal .modal-dialog .modal-content .modal-body #tag {
-  margin-top: 15px; }
-.container-fluid #myModal .modal-dialog .modal-content .modal-body #noteHeading {
-  padding-top: 15px; }
-.container-fluid #myModal .modal-dialog .modal-content .modal-body #note {
-  margin-top: 15px;
-  height: 250px; }
-.container-fluid #myModal .modal-dialog .modal-content .modal-body #saveButton {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  width: 100%;
-  height: 50px; }
 
 /*# sourceMappingURL=index.css.map */

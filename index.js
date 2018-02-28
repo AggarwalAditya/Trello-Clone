@@ -1,11 +1,32 @@
 $(document).ready(function(){
-    fetch("http://restful-api-.herokuapp.com/api/aditya/notes",{mode:'cors'}).the(function(res){
+    fetch("http://restful-api-.herokuapp.com/api/aditya/notes",{mode:'cors'}).then(function(res){
         return res.json();
     })
     .then(function(data){
         let stringJSON=JSON.stringify(data);
+        localStorage.setItem("notesJSON",stringJSON);
         let jsonData=JSON.parse(stringJSON);
+        
+        console.log("LETS PARSE THE JSON");
+       
+         let template="<ul id='myTagList'>{{#.}}<li class='singleTag' id={{tag}}><p class='fa fa-hashtag'></p>{{tag}}</li>{{/.}}</ul>"
+    let html=Mustache.render(template,jsonData);
+    $(".tagContainer").append(html);
+         let allSingleTags=document.getElementsByClassName("singleTag");
+            
+        for(let i=0;i<allSingleTags.length;i++)
+            {
+                allSingleTags[i].addEventListener("click",function(){
+                   console.log(allSingleTags[i].id);
+                   
+                });
+            }
     })
+  
+    
+    
+
+    
 });
 
 
@@ -52,3 +73,13 @@ formBody = formBody.join("&");
         window.location="./index.html";
    })
 });
+
+
+let logout=document.getElementById("logout");
+logout.addEventListener("click",function(){
+   sessionStorage.removeItem("email");
+    window.location="./login.html"
+});
+
+
+
