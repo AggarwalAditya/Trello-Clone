@@ -39,18 +39,43 @@ $(document).ready(function(){
         
         console.log("MY DS is:");
         console.log(map);
+        console.log('Looping');
         
+//        let templ="<ul id='myTagList'>{{#.}}<li class='singleTag' id={{i}}><p class='fa fa-hashtag'></p>{{i}}</li>{{/.}}</ul>"
+        
+        
+        
+        let tagTemplate="<ul id='myTagList'>";
+        
+        
+        for(let i in map)
+        {
+            console.log("key= "+i+" value= "+map[i]);
+            tagTemplate=tagTemplate+"<li class='singleTag' id="+i+"><p class='fa fa-hashtag'></p>"+ i+"</li>"
+        }
+        
+        tagTemplate+tagTemplate+"</ul>";
        
-         let template="<ul id='myTagList'>{{#.}}<li class='singleTag' id={{tag}}><p class='fa fa-hashtag'></p>{{tag}}</li>{{/.}}</ul>"
-    let html=Mustache.render(template,jsonData);
-    $(".tagContainer").append(html);
+//         let template="<ul id='myTagList'>{{#.}}<li class='singleTag' id={{tag}}><p class='fa fa-hashtag'></p>{{tag}}</li>{{/.}}</ul>"
+//    let html=Mustache.render(template,jsonData);
+//    let html2=Mustache.render(templ,map["random"]);
+    $(".tagContainer").append(tagTemplate);
          let allSingleTags=document.getElementsByClassName("singleTag");
             
         for(let i=0;i<allSingleTags.length;i++)
             {
                 allSingleTags[i].addEventListener("click",function(){
+                   // $(".tagContainer").html("");
                    console.log(allSingleTags[i].id);
                    
+                    let tagName=allSingleTags[i].id;
+                    let arr=map[String(tagName)];
+                    for(let j=0;j<arr.length;j++)
+                    {
+                        let card="<div class='card myCard'><img class='card-img-top' src='img.jpg' alt='Card image'><div class='card-body'><h4 class='card-title'>"+tagName+"</h4><p class='card-text'>"+arr[j]+"</p></div></div>";
+                        $(".tagRelatedNotes").append(card);
+                    }
+                    
                 });
             }
     })

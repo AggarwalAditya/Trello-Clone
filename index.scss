@@ -29,11 +29,25 @@
                 display: inline-block;
                 margin: 10px;
                 
-                border: 1px solid grey;
+                border: 1px solid #E8E8E8;
                 padding: 4px;
                 &:hover{
                     cursor: pointer;
                 }
+            }
+        }
+        .tagRelatedNotes
+        {
+            .myCard
+            {
+                display: inline-block;
+                margin: 10px;
+                
+                border: 1px solid #E8E8E8;
+                padding: 4px;
+               
+                
+                
             }
         }
     }
