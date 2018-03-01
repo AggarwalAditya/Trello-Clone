@@ -119,12 +119,17 @@ $(document).ready(function(){
             allSingleTags[0].classList.add("singleTag2");
         });
     })
-  
+    var allbtn=$("#all");
+     allbtn.click();
     
-    
+   
 
     
 });
+
+//window.onload=function(){
+//    
+//};
 
 
 let saveButton=document.getElementById("saveButton");
