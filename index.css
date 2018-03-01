@@ -29,7 +29,7 @@
   .container-fluid #logout {
     display: inline-block;
     margin-left: 1200px; }
-    .container-fluid #logout hover {
+    .container-fluid #logout:hover {
       cursor: pointer; }
   .container-fluid #myModal .modal-dialog .modal-content .modal-body #tag {
     margin-top: 15px; }

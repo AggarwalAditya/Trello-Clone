@@ -14,7 +14,8 @@ $(document).ready(function(){
         //MAKE THE DATA STRUCTURE
         
         let map = {};
-        let userEmail=sessionStorage.getItem("email");;
+        let userEmail=sessionStorage.getItem("email");
+      
         for(let i=0;i<jsonData.length;i++)
         {
             let obj=jsonData[i];
@@ -35,6 +36,7 @@ $(document).ready(function(){
                     map[String(obj.tag)]=arr;
                 }
             }
+            
         }
         
         console.log("MY DS is:");
@@ -47,7 +49,10 @@ $(document).ready(function(){
         
         let tagTemplate="<ul id='myTagList'>";
         
-        
+        if(jsonData.length>0)
+        {
+            tagTemplate=tagTemplate+"<li class='singleTag' id='all'><p class='fa fa-hashtag'></p>All</li>"
+        }
         for(let i in map)
         {
             console.log("key= "+i+" value= "+map[i]);
@@ -62,10 +67,10 @@ $(document).ready(function(){
     $(".tagContainer").append(tagTemplate);
          let allSingleTags=document.getElementsByClassName("singleTag");
             
-        for(let i=0;i<allSingleTags.length;i++)
+        for(let i=1;i<allSingleTags.length;i++)
             {
                 allSingleTags[i].addEventListener("click",function(){
-                   // $(".tagContainer").html("");
+                   $(".tagRelatedNotes").html("");
                    console.log(allSingleTags[i].id);
                    
                     let tagName=allSingleTags[i].id;
@@ -78,6 +83,19 @@ $(document).ready(function(){
                     
                 });
             }
+        
+        allSingleTags[0].addEventListener("click",function(){
+           for(let k in map)
+            {
+                let arr=map[k];
+                for(let g=0;g<arr.length;g++)
+                {
+                    let card="<div class='card myCard'><img class='card-img-top' src='img.jpg' alt='Card image'><div class='card-body'><h4 class='card-title'>"+k+"</h4><p class='card-text'>"+arr[g]+"</p></div></div>";
+                    $(".tagRelatedNotes").append(card);
+                }
+                
+            }
+        });
     })
   
     
@@ -137,6 +155,7 @@ logout.addEventListener("click",function(){
    sessionStorage.removeItem("email");
     window.location="./login.html";
 });
+
 
 
 
