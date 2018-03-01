@@ -51,12 +51,12 @@ $(document).ready(function(){
         
         if(jsonData.length>0)
         {
-            tagTemplate=tagTemplate+"<li class='singleTag' id='all'><p class='fa fa-hashtag'></p>All</li>"
+            tagTemplate=tagTemplate+"<li class='singleTag allTags' id='all'><p class='fa fa-hashtag'></p>All</li>"
         }
         for(let i in map)
         {
             console.log("key= "+i+" value= "+map[i]);
-            tagTemplate=tagTemplate+"<li class='singleTag' id="+i+"><p class='fa fa-hashtag'></p>"+ i+"</li>"
+            tagTemplate=tagTemplate+"<li class='singleTag allTags' id="+i+"><p class='fa fa-hashtag'></p>"+ i+"</li>"
         }
         
         tagTemplate+tagTemplate+"</ul>";
@@ -65,7 +65,8 @@ $(document).ready(function(){
 //    let html=Mustache.render(template,jsonData);
 //    let html2=Mustache.render(templ,map["random"]);
     $(".tagContainer").append(tagTemplate);
-         let allSingleTags=document.getElementsByClassName("singleTag");
+        
+    let allSingleTags=document.getElementsByClassName("allTags");
             
         for(let i=1;i<allSingleTags.length;i++)
             {
@@ -79,14 +80,25 @@ $(document).ready(function(){
                     {
                         let card="<div class='card myCard'><img class='card-img-top' src='img.jpg' alt='Card image'><div class='card-body'><h4 class='card-title'>"+tagName+"</h4><p class='card-text'>"+arr[j]+"</p></div></div>";
                         $(".tagRelatedNotes").append(card);
+                        
                     }
+                    for(let r=0;r<allSingleTags.length;r++)
+                    {
+                    allSingleTags[r].classList.remove("singleTag2");
+                    allSingleTags[r].classList.add("singleTag");
+                    }
+                    
+                    allSingleTags[i].classList.remove("singleTag");
+                    allSingleTags[i].classList.add("singleTag2");
                     
                 });
             }
         
-        allSingleTags[0].addEventListener("click",function(){
+        document.getElementById("all").addEventListener("click",function(){
+            $(".tagRelatedNotes").html("");
            for(let k in map)
             {
+                 
                 let arr=map[k];
                 for(let g=0;g<arr.length;g++)
                 {
@@ -94,7 +106,17 @@ $(document).ready(function(){
                     $(".tagRelatedNotes").append(card);
                 }
                 
+                
             }
+            
+            for(let r=0;r<allSingleTags.length;r++)
+            {
+                allSingleTags[r].classList.remove("singleTag2");
+                allSingleTags[r].classList.add("singleTag");
+            }
+            
+            allSingleTags[0].classList.remove("singleTag");
+            allSingleTags[0].classList.add("singleTag2");
         });
     })
   

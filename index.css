@@ -18,6 +18,15 @@
       padding: 4px; }
       .container-fluid .myContainer .tagContainer .singleTag:hover {
         cursor: pointer; }
+    .container-fluid .myContainer .tagContainer .singleTag2 {
+      display: inline-block;
+      margin: 10px;
+      background-color: #202020;
+      color: white;
+      border: 1px solid #E8E8E8;
+      padding: 4px; }
+      .container-fluid .myContainer .tagContainer .singleTag2:hover {
+        cursor: pointer; }
     .container-fluid .myContainer .tagRelatedNotes .myCard {
       display: inline-block;
       margin: 10px;

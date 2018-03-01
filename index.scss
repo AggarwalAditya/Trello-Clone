@@ -35,6 +35,19 @@
                     cursor: pointer;
                 }
             }
+            
+            .singleTag2{
+                
+                display: inline-block;
+                margin: 10px;
+                background-color:#202020;
+                color:white;
+                border: 1px solid #E8E8E8;
+                padding: 4px;
+                &:hover{
+                    cursor: pointer;
+            }
+            }
         }
         .tagRelatedNotes
         {

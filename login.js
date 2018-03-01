@@ -1,3 +1,11 @@
+$(document).ready(function(){
+   if(sessionStorage.getItem("email"))
+    {
+        window.location="./index.html";
+    }
+});
+
+
 let toSignup=document.getElementById("toSignup");
 toSignup.addEventListener("click",function(){
     window.location = "./signup.html"; 
@@ -34,7 +42,7 @@ function hitServer()
        if(flag===1)
         {
             sessionStorage.setItem("email",email);
-            window.location="./index.html"
+            window.location="./index.html";
         }
        
        else
