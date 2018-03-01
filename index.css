@@ -38,6 +38,10 @@
   .container-fluid #myModal .modal-dialog .modal-content .modal-body #note {
     margin-top: 15px;
     height: 250px; }
+  .container-fluid #myModal .modal-dialog .modal-content .modal-body #myMessage {
+    padding: 5px;
+    color: red;
+    text-align: center; }
   .container-fluid #myModal .modal-dialog .modal-content .modal-body #saveButton {
     margin-top: 20px;
     margin-bottom: 10px;

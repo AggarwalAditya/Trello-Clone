@@ -42,6 +42,13 @@
            text-align: center;
         }
         
+        #toSignup
+        {
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        
         #message
         {
             padding: 5px;

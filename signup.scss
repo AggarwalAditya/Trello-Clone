@@ -47,5 +47,11 @@
             color: red;
         }
         
+        #toLogin{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        
     }
 }

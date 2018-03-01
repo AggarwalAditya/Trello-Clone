@@ -23,6 +23,8 @@
     height: 50px; }
   .container-fluid .formContainer p {
     text-align: center; }
+  .container-fluid .formContainer #toSignup:hover {
+    cursor: pointer; }
   .container-fluid .formContainer #message {
     padding: 5px;
     color: red; }

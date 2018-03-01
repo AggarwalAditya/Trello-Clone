@@ -26,5 +26,7 @@
   .container-fluid .formContainer #message {
     padding: 5px;
     color: red; }
+  .container-fluid .formContainer #toLogin:hover {
+    cursor: pointer; }
 
 /*# sourceMappingURL=signup.css.map */

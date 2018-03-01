@@ -115,7 +115,11 @@ saveButton.addEventListener("click",function(){
     console.log("email= "+email);
     console.log("tag= "+tag);
     console.log("note= "+note);
-    
+    if(tag.length===0 || note.length===0)
+    {
+        document.getElementById("myMessage").innerHTML="Please fill up the fields first.";
+        return;
+    }
     let details={
                     email: email,
                     tag: tag,
