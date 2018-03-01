@@ -10,6 +10,7 @@ clone it and start from signup page.
 ## API support
 https://github.com/chitrank2050/RESTful-api-
 
+## Screenshots
 ![alt text](https://github.com/AggarwalAditya/UIProject/blob/master/screenshots/ss1.png)
 ![alt text](https://github.com/AggarwalAditya/UIProject/blob/master/screenshots/ss2.png)
 ![alt text](https://github.com/AggarwalAditya/UIProject/blob/master/screenshots/ss3.png)
