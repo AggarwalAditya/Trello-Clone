@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function(){ 
     fetch("http://restful-api-.herokuapp.com/api/aditya/notes",{mode:'cors'}).then(function(res){
         return res.json();
     })
@@ -49,14 +49,14 @@ $(document).ready(function(){
         
         let tagTemplate="<ul id='myTagList'>";
         
-        if(jsonData.length>0)
+        if(Object.keys(map).length>0)
         {
-            tagTemplate=tagTemplate+"<li class='singleTag allTags' id='all'><p class='fa fa-hashtag'></p>All</li>"
+            tagTemplate=tagTemplate+"<li class='singleTag allTags' id='all'><p class='fa fa-hashtag'></p><span> </span>All</li>"
         }
         for(let i in map)
         {
             console.log("key= "+i+" value= "+map[i]);
-            tagTemplate=tagTemplate+"<li class='singleTag allTags' id="+i+"><p class='fa fa-hashtag'></p>"+ i+"</li>"
+            tagTemplate=tagTemplate+"<li class='singleTag allTags' id="+i+"><p class='fa fa-hashtag'></p><span> </span>"+ i+"</li>"
         }
         
         tagTemplate+tagTemplate+"</ul>";

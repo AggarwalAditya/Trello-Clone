@@ -53,9 +53,9 @@ function hitServer()
         }
        
    })
-//   .catch(function(error){
-//        console.log("API ERROR");
-//    })
+   .catch(function(error){
+        console.log("API ERROR");
+    })
 }
 
 let loginButton=document.getElementById("loginButton");
