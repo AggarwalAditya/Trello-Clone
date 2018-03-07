@@ -1,4 +1,10 @@
 $(document).ready(function(){ 
+
+	if(!sessionStorage.getItem("email"))
+    {
+        window.location="./login.html";
+    }
+
     fetch("http://restful-api-.herokuapp.com/api/aditya/notes",{mode:'cors'}).then(function(res){
         return res.json();
     })
